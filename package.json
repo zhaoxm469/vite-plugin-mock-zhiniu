@@ -1,36 +1,36 @@
 {
-  "name": "vite-plugin-mock-zhiniu",
-  "version": "0.0.2",
-  "description": "A Vite plugin for mocking API responses with TypeScript support",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "homepage": "https://github.com/zhaoxm469/vite-plugin-mock-zhiniu",
-  "scripts": {
-    "dev": "bun build ./index.ts --outdir ./dist --watch",
-    "build": "bun build ./index.ts --outdir ./dist",
-    "type-check": "tsc --noEmit",
-    "prepare": "bun run build"
-  },
-  "keywords": [
-    "vite",
-    "plugin",
-    "mock",
-    "api",
-    "typescript"
-  ],
-  "author": "zhaoxm",
-  "license": "MIT",
-  "peerDependencies": {
-    "vite": "^4.0.0"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/node": "^20.0.0",
-    "vite": "^6.3.3",
-    "typescript": "^5.0.0"
-  }
+    "name": "vite-plugin-mock-zhiniu",
+    "version": "0.0.3",
+    "description": "A Vite plugin for mocking API responses with TypeScript support",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "homepage": "https://github.com/zhaoxm469/vite-plugin-mock-zhiniu",
+    "scripts": {
+        "build": "tsup index.ts --format cjs,esm --dts --clean",
+        "type-check": "tsc --noEmit",
+        "prepare": "bun run build"
+    },
+    "keywords": [
+        "vite",
+        "plugin",
+        "mock",
+        "api",
+        "typescript"
+    ],
+    "author": "zhaoxm",
+    "license": "MIT",
+    "peerDependencies": {
+        "vite": "^4.0.0"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "@types/node": "^20.0.0",
+        "tsup": "^8.4.0",
+        "typescript": "^5.0.0",
+        "vite": "^6.3.3"
+    }
 }
