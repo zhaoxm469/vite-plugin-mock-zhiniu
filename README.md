@@ -79,43 +79,16 @@ console.log(data); // { name: 'John Doe', age: 30, isMock: true }
 
 响应内容可以是以下格式：
 
-1. 对象：
-```typescript
-{
-  default: {
-    // 响应数据
-  }
-}
-```
-
-2. 函数：
-```typescript
-{
-  default: async (req, res) => {
-    // 处理请求并返回响应
-    return {
-      // 响应数据
-    };
-  }
-}
-```
-
-3. 直接对象：
-```typescript
-{
-  // 响应数据
-}
-```
-
-
 ```typescript
 export default {
+    // 直接对象：
     '/api/user/login': {
         code: 0,
         data: {
             token: '1234567890',
         },
     },
+    // 函数
     '/api/user/login1': {
         default:()=>{
             return {
@@ -126,6 +99,7 @@ export default {
             }
         }
     },
+    // 异步函数
     '/api/user/login2': {
         default:async()=>{
             return new Promise((resolve)=>{
@@ -140,6 +114,7 @@ export default {
             })
         }
     },
+    // 获取请求的body，和url中的query数据
     '/api/user/login3': {
         default:(req)=>{
             return {
