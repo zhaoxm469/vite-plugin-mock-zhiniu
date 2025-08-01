@@ -1,5 +1,4 @@
 import type { Plugin } from 'vite';
-import type { Server } from 'http';
 import type { IncomingMessage, ServerResponse } from 'http';
 
 interface MockResponse {
